@@ -20,5 +20,6 @@ chrome.storage.local.get('count', function(data) {
 // https://developer.chrome.com/extensions/messaging
 // ============================================================
 chrome.runtime.sendMessage({ 'message': 'hello' }, function(response) {
+    // To see how this message was handled, see js/background.js.
     console.log('The response from your message was: ' + response.message);
 });
