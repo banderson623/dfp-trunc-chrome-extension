@@ -1,6 +1,8 @@
-// ==================================
+// ============================================================
 // CONTEXT MENU
-// ==================================
+// ------------------------------------------------------------
+// https://developer.chrome.com/extensions/contextMenus
+// ============================================================
 chrome.contextMenus.create({
     'title': 'Chrome Extension Template',
     'contexts': ['page', 'selection', 'link', 'editable', 'image', 'video', 'audio'],
@@ -12,3 +14,4 @@ chrome.contextMenus.create({
         console.log('');
     }
 });
+

@@ -2,6 +2,7 @@
 
 // ==================================
 // STORAGE
+// https://developer.chrome.com/extensions/storage
 // ==================================
 chrome.storage.local.get('count', function(data) {
     var count = 1;
