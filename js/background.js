@@ -26,3 +26,14 @@ chrome.runtime.onMessage.addListener(
         sendResponse({ 'message': 'Hello there, fine fellow!' });
     }
 );
+
+/**
+ * Will retrieve the active tab in the current window.
+ * @param  { Function } callback The first and only parameter of the callback will be 
+ *                               the Tab object of the active tab in the current window.
+ */
+function getActiveTab(callback) {
+    chrome.tabs.query({ 'active': true, 'currentWindow': true }, function(tabs) {
+        callback(tabs[0]);
+    });
+}
