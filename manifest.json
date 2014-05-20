@@ -1,3 +1,5 @@
+// These are some things commonly added to the manifest. For a full description of the manifest
+// specification, go here: https://developer.chrome.com/extensions/manifest
 {
   "name": "Chrome Extension Template",
   "manifest_version": 2,
