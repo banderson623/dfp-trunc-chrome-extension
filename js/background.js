@@ -15,3 +15,14 @@ chrome.contextMenus.create({
     }
 });
 
+// ============================================================
+// MESSAGE PASSING
+// ------------------------------------------------------------
+// https://developer.chrome.com/extensions/messaging
+// ============================================================
+chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+        console.log('Received a message!');
+        sendResponse({ 'message': 'Hello there, fine fellow!' });
+    }
+);
