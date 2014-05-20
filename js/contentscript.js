@@ -1,0 +1,1 @@
+﻿console.log('Hello, world! This is the Chrome Extension Template speaking.');
