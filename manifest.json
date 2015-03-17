@@ -2,13 +2,12 @@
 // specification, go here: https://developer.chrome.com/extensions/manifest
 {
   // START REQUIRED
-  "name": "Chrome Extension Template",
+  "name": "DFP Truncation Tracker",
   "manifest_version": 2,
   "version": "1.0",
   // END REQUIRED
 
-  "description": "A template Chrome extension that just has placeholders for a lot of the basic
-components to get you started.",
+  "description": "DFP Requests must be under 2048 characters, this is a tracker for such things.",
 
   "icons": {
         "16": "img/icon.png",
@@ -21,23 +20,19 @@ components to get you started.",
     "default_icon": "img/icon.png"
   },
 
-  "chrome_url_overrides": {
-      "newtab": "newtab.html"
-  },
 
   "content_scripts": [
     {
-      "matches": ["http://*/*",
-                  "https://*/*"],
+      "matches": ["http://*/*"],
       "js": [
         "js/libs/jquery-2.1.1.min.js",
         "js/contentscript.js"
       ],
 
-      "css": [
-        "css/contentscript.css"
-      ],
-      
+      // "css": [
+      //   "css/contentscript.css"
+      // ],
+
       "run_at": "document_end"
     }
   ],
@@ -48,8 +43,7 @@ components to get you started.",
 
   "permissions": [
     "tabs",
-    "storage",
-    "contextMenus"
+    "storage"
   ],
 
   "web_accessible_resources": [
